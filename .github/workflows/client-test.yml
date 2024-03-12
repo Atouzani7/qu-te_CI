@@ -1,4 +1,4 @@
-name: client-tests-workflow
+name: 🚦 client-tests-workflow
 
 on: pull_request
 
@@ -6,7 +6,7 @@ jobs:
   test-client:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-      - name: Goto client and run tests
+      - name: 🛫 Check out code #sert à récupérer le code du repo sur lequel le workflow est lancé
+        uses: actions/checkout@v2 #On utilise une action qui nous est fournie par Github, on spécifie donc le nom de l'action, avec le mot clef uses
+      - name: 🏃🏽 Goto client and run tests # permet de nous rendre dans le dossier où se trouve le code du client, d'installer les dépendances et de lancer les tests
         run: cd client && npm i && npm test
